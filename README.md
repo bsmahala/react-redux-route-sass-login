@@ -1,6 +1,10 @@
 # react-redux-route-sass-login
 This project is prepared template for login logout with react redux route sass
 
+
+#Project Image
+![Project Image](screenshot.jpg)
+
 ## How to use
 
 First copy the repo into your disk.
