@@ -1,0 +1,55 @@
+{
+    "name": "react-start-sass-route-login",
+    "version": "1.0.0",
+    "description": "This project is prepared template for login logout with react redux route sass",
+    "scripts": {
+        "build-css": "node-sass-chokidar src/ -o src/",
+        "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+        "start-js": "react-scripts start",
+        "start": "npm-run-all -p watch-css start-js",
+        "build-js": "react-scripts build",
+        "build": "npm-run-all build-css build-js",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bsmahala/react-redux-route-sass-login.git"
+    },
+    "keywords": [
+        "React",
+        "Redux",
+        "Route",
+        "Sass",
+        "Login",
+        "Template"
+    ],
+    "author": "Birbal Singh Mahala",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bsmahala/react-redux-route-sass-login/issues"
+    },
+    "homepage": "https://github.com/bsmahala/react-redux-route-sass-login#readme",
+    "dependencies": {
+        "axios": "^0.17.1",
+        "eslint": "^4.15.0",
+        "node-sass": "^4.7.2",
+        "node-sass-chokidar": "0.0.3",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-redux": "^5.0.6",
+        "react-router": "^4.2.0",
+        "react-router-dom": "^4.2.2",
+        "react-router-redux": "^5.0.0-alpha.9",
+        "react-scripts": "^1.1.0",
+        "react-transition-group": "^1.2.1",
+        "redux": "^3.7.2",
+        "redux-form": "^7.2.1",
+        "redux-promise": "^0.5.3",
+        "redux-thunk": "^2.2.0",
+        "sass-loader": "^6.0.6"
+    },
+    "devDependencies": {
+        "npm-run-all": "^4.1.2"
+    }
+}

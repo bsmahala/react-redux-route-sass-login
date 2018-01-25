@@ -1,0 +1,260 @@
+// layout sass
+a 
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+
+$header-height: 90px;
+$footer-height: 20px;
+$body-height : $footer-height + $header-height + 1px;
+body
+    :margin 0
+    :color #000
+    :background #000
+    :font-size 13px
+    :font-family Arial, Helvetica, sans-serif
+html,body
+    :height 100%    
+header
+    :position fixed
+    :height $header-height
+    :width 100%
+ 
+section.body
+    :position fixed
+    :width 100%
+    :top $header-height + 1
+    :overflow auto
+    :height calc(100% - #{$body-height}) !important
+section.tabs
+    :width 100%
+section.tabs .tab-data
+    :width calc(100% - 10px)
+    :padding 0px 5px
+    :min-height 68px
+.nav.menu 
+    :width calc(100% - 201px)
+    :float left
+    :overflow auto
+.nav.brand 
+    :width  200px
+    :height 75px
+    :overflow auto
+.nav.brand h3
+    :float  right
+    :overflow none
+    :margin 0px 11px 0px 1px
+
+  
+
+.btn, section.tabs .tab
+    :display inline-block;
+    :padding 1px 6px;
+    :margin-bottom 0;
+    :font-weight 500;
+    :line-height 1.42857143;
+    :text-align center;
+    :white-space nowrap;
+    :vertical-align middle;
+    :-ms-touch-action manipulation;
+    :touch-action manipulation;
+    :cursor pointer;
+    :-webkit-user-select none;
+    :-moz-user-select none;
+    :-ms-user-select none;
+    :user-select none;
+    :background-image none;
+    :border 1px solid transparent;
+    :border-radius 3px   
+    :position relative; 
+    :margin 1px 1px
+.btn    
+    :text-align center
+
+
+    
+
+$btn-bg-color: #dbd7d7 
+$div: #e9e9e9
+$btn-text-color: #000
+
+$btn-danger: lighten(red, 20)
+$btn-success: lighten(#418241, 30)
+$btn-info: lighten(red, 20)
+$btn-primary-color: lighten(blue, 20)
+
+.bg-danger, tr.bg-danger td
+    :background: linear-gradient($btn-danger, darken($btn-danger, 8), $btn-danger)
+.bg-info, tr.bg-info td
+    :background: linear-gradient($btn-danger, darken($btn-danger, 8), $btn-danger)
+.bg-success, tr.bg-success td
+    :background: linear-gradient($btn-success, darken($btn-success, 8), $btn-success)
+.alert
+    :padding 8px 20px
+    :margin 10px
+    :border-radius 3px
+    :font-size 15px
+    :color #fff
+.alert-danger
+    :background: linear-gradient($btn-danger, darken($btn-danger, 8), $btn-danger)
+.alert-info
+    :background: linear-gradient($btn-danger, darken($btn-danger, 8), $btn-danger)
+.alert-success
+    :background: linear-gradient($btn-success, darken($btn-success, 8), $btn-success)
+
+header, footer , section.body,body, .bg, section.report .header, section.report .footer , .window .header, .window .footer
+    :color $btn-text-color    
+    :background -webkit-gradient(linear, left top, left bottom, color-stop(0%,$div), color-stop(100%, darken($div, 5)))
+
+section.body
+    :border-top 1px solid darken(#eaeaea, 20)
+section.tabs .tab
+    :border 1px solid darken($btn-bg-color, 20)
+    :border-bottom-left-radius 0
+    :border-bottom-right-radius 0
+    :background linear-gradient($btn-bg-color, darken($btn-bg-color, 10), $btn-bg-color)
+    :z-index 122
+
+.row
+  :width 100%
+  :margin 5px 1px
+.row:after 
+    content: "";
+    display: table;
+    clear: both;
+
+.col-3
+  :float left
+  :border 1px solid transparent
+  :width calc(25% - 2px)
+.col-9
+  :float left
+  :border 1px solid transparent
+  :width calc(75% - 2px)
+.col-6
+  :float left
+  :border 1px solid transparent
+  :width calc(50% - 2px)
+.offset-3
+  :margin-left calc(25% - 1px)
+.offset-9
+  :margin-left calc(75% - 1px)
+.offset-6
+  :margin-left calc(55% - 1px)
+.error 
+    :color red
+.btn.btn-icon:hover 
+    :border-bottom 1px solid darken($btn-bg-color, 15)
+    :background linear-gradient(darken($btn-bg-color, 10), lighten($btn-bg-color, 8), darken($btn-bg-color, 7))
+.btn.btn-icon:not(:first-child)
+    :border-left 1px solid darken($btn-bg-color, 20)
+
+section.tabs .tab.active
+    :border-bottom 1px solid lighten($btn-bg-color, 7)
+    :border-bottom-left-radius 0
+    :border-bottom-right-radius 0
+    :background linear-gradient(lighten($btn-bg-color, 10), lighten($btn-bg-color, 8), lighten($btn-bg-color, 7))
+
+section.tabs .tab-data
+    :border-top 1px solid darken($btn-bg-color, 20)
+    :border-bottom 1px solid darken($btn-bg-color, 20)
+    :background -webkit-gradient(linear, left top, left bottom, color-stop(0%,$div), color-stop(100%, darken($div, 5)))
+    :margin-top -2px    
+
+.btn-default
+    :color: $btn-text-color
+    :background: linear-gradient($btn-bg-color, darken($btn-bg-color, 10), $btn-bg-color)
+    :border-color: darken($btn-bg-color, 15)
+    :box-shadow: 0px 0px 2px lighten($btn-bg-color, 18)
+
+   
+.btn-default:hover
+    :background: linear-gradient(lighten($btn-bg-color, 5), $btn-bg-color, lighten($btn-bg-color, 5))
+    :box-shadow: 0px 0px 2px lighten($btn-bg-color, 18)
+    :border-color: darken($btn-bg-color, 15)
+.btn-default:active
+    :background: linear-gradient(darken($btn-bg-color, 10), $btn-bg-color, darken($btn-bg-color, 10))
+    :border-color: darken($btn-bg-color, 15)
+
+.btn-danger
+    :color: #fff
+    :background: linear-gradient($btn-danger, darken($btn-danger, 10), $btn-danger)
+    :border-color: darken($btn-danger, 15)
+    :box-shadow: 0px 0px 2px lighten($btn-danger, 18)   
+.btn-danger:hover
+    :background: linear-gradient(lighten($btn-danger, 5), $btn-danger, lighten($btn-danger, 5))
+    :box-shadow: 0px 0px 2px lighten($btn-danger, 18)
+    :border-color: darken($btn-danger, 15)
+.btn-danger:active
+    :background: linear-gradient(darken($btn-danger, 10), $btn-danger, darken($btn-danger, 10))
+    :border-color: darken($btn-danger, 15)
+
+.btn-primary
+    :color: #fff
+    :background: linear-gradient($btn-primary-color, darken($btn-primary-color, 10), $btn-primary-color)
+    :border-color: darken($btn-primary-color, 15)
+    :box-shadow: 0px 0px 2px lighten($btn-primary-color, 18)   
+.btn-primary:hover
+    :background: linear-gradient(lighten($btn-primary-color, 5), $btn-primary-color, lighten($btn-primary-color, 5))
+    :box-shadow: 0px 0px 2px lighten($btn-primary-color, 18)
+    :border-color: darken($btn-primary-color, 15)
+.btn-primary:active
+    :background: linear-gradient(darken($btn-primary-color, 10), $btn-primary-color, darken($btn-primary-color, 10))
+    :border-color: darken($btn-primary-color, 15)
+
+.form .row    
+    :margin 5px 0px
+
+input[type=text], input[type=password]
+    border: 1px solid darken($btn-bg-color, 11)
+    padding: 2px 5px
+    min-width: 50px
+    width: 100%
+    box-sizing: border-box;
+    background: #fff
+    resize: vertical;
+
+input:focus
+    border: 1px solid darken($btn-bg-color, 19)
+    outline: darken($btn-bg-color, 11)
+    box-shadow: 0 0 5px darken($btn-bg-color, 61)
+
+label.inline
+    :display inline-block
+    :float left
+
+.window-center
+    :top 25%
+    :bottom 50%
+.h-center 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;       
+.window
+    :min-width 200px
+    :border 1px solid #eaeaea
+    background: #e1e1e1
+    margin: 0 auto;
+    position: relative; 
+    z-index: 41;
+    border-radius: 3px
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4); 
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index:  10000
+.window .header, .window .footer
+  min-height: 20px
+  padding: 1px 2px   
+.window .body
+    padding: 5px
+    width: calc(100% - 10px)
+    background: #fff
+.window .close:before 
+    content: 'x'; // here is your X(cross) sign.
+    color: #000;
+    float: right
+    margin-right: 5px
+    font-weight: 300;
+    font-family: Arial, sans-serif;
+.window .close:hover 
+    :cursor pointer
